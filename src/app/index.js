@@ -31,7 +31,6 @@ class App extends React.Component{
 
 }
 
-//JavaScript中的陣列索引值和其他的程式語言類似，第一個值的索引值是從0開始。
 //create a component that produce some HTML.
 	render(){
 		const videoSearch = _.debounce((term) => {this.videoSearch(term)},90000)
@@ -45,10 +44,8 @@ class App extends React.Component{
 		);
 	}
 }
-//VideoList跟Searchbar要先設定 個別component的function才不會報undefined
-//<VideoDetail video= {this.state.videos[0]}/>會報undefined 因為在執行constructor時array還是empty
 
 //if videoList call the function with the video,the selectedVideo on the app will update
-//onVideoSelected = {(selectedVideo) => this.setState({selectedVideo})}
+
 
 ReactDOM.render(<App/>,window.document.getElementById("app"));
